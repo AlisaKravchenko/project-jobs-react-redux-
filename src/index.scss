@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+.main {
+    min-height: calc(100vh - 64px - 70px);
+}
+.job-btn {
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 15px;
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    &:focus {
+        font-weight: bold;
+        background-color: white;
+    }
+}
+.jobs-search {
+    max-width: 97%;
+}
+.jobs-submit {
+    display: inline-block;
+    min-width: 25%;
+}
+.jobs {
+    margin-top: 1rem;
+    max-height: calc(100vh - 60px - 70px);
+    overflow: scroll;
+}
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.card {
+    width: 20rem;
+    margin-left: 1rem;
+}

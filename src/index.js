@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import jobsSlice from './redux/jobsSlice';
+import {configureStore} from '@reduxjs/toolkit';
+import createSagaMiddleware from '@redux-saga/core';
+import { rootWatcher } from './saga/sagas';
+import workersSlice from './redux/workersSlice';
+
+const sagaMiddleware = createSagaMiddleware()
+
+const store = configureStore({
+  reducer: {
+    jobs: jobsSlice,
+    workers: workersSlice
+  },
+  middleware: [sagaMiddleware],
+})
+
+sagaMiddleware.run(rootWatcher)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Provider store={store}>
+      <App/>
+    </Provider>,
+    
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
