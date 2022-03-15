@@ -12,7 +12,7 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { createBrowserHistory } from 'history'
 
 
-export const history = createBrowserHistory()
+export const history = createBrowserHistory({basename: '/project-jobs-react-redux-saga'})
 const sagaMiddleware = createSagaMiddleware()
 
 const store = configureStore({
