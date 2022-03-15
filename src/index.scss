@@ -11,8 +11,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
-.main {
+main {
     min-height: calc(100vh - 64px - 70px);
+    // overflow-y: scroll;
 }
 .job-btn {
     border: none;
@@ -35,15 +36,48 @@ code {
 }
 .jobs {
     margin-top: 1rem;
-    max-height: calc(100vh - 60px - 70px);
-    overflow: scroll;
+    max-height: calc(100vh - 60px - 70px - 40px);
+    overflow-y: scroll;
 }
 .cards-list {
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
+    max-height: calc(100vh - 60px - 70px - 40px);
+    overflow-y: scroll;
     justify-content: left;
 }
 .card {
     width: 20rem;
+    margin-left: 1rem;
+}
+.info {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    text-align: left;
+    button,
+    table {
+        margin-bottom: 2rem;
+    }
+}
+.info-list {
+    font-size: 25px;
+}
+.infostr {
+    text-align: center;
+}
+.more-info {
+    position: absolute;
+    cursor: pointer;
+    font-size: 20px;
+    left: 10px;
+}
+ul.usaged {
+    margin-left: 1rem;
+    font-size: 2rem;
+    list-style-type: circle !important;
+}
+.usaged-btn {
     margin-left: 1rem;
 }
