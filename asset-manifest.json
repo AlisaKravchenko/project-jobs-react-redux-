@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/project-jobs-react-redux-saga/static/css/main.70cb9928.css",
+    "main.js": "/project-jobs-react-redux-saga/static/js/main.6e273190.js",
+    "index.html": "/project-jobs-react-redux-saga/index.html",
+    "main.70cb9928.css.map": "/project-jobs-react-redux-saga/static/css/main.70cb9928.css.map",
+    "main.6e273190.js.map": "/project-jobs-react-redux-saga/static/js/main.6e273190.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70cb9928.css",
+    "static/js/main.6e273190.js"
+  ]
+}
