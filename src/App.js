@@ -9,7 +9,7 @@ import { About } from './pages/About';
 
 function App() {
   return (
-    <ConnectedRouter history={history}>
+    <ConnectedRouter history={history} basename='/project-jobs-react-redux-saga'>
     <div className="App">
       <Header />
       <main >
