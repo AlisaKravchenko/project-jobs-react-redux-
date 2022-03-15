@@ -1,21 +1,25 @@
+import { push } from 'connected-react-router'
+import { useDispatch } from 'react-redux'
+
 export function Header() {
+    const dispatch = useDispatch()
     return (
         <nav>
             <div className='nav-wrapper blue lighten-3'>
-                <a href='/' className='brand-logo right'>
+                <span
+                    className='grey-text text-lighten-4 right more-info'
+                    onClick={() => {
+                        dispatch(push('/about'))
+                    }}
+                >
+                    More info about application
+                </span>
+                <a
+                    href='https://github.com/AlisaKravchenko/project-jobs-react-redux-saga'
+                    className='brand-logo right'
+                >
                     Repo
                 </a>
-                {/* <ul id='nav-mobile' className='left hide-on-med-and-down'>
-                    <li>
-                        <a href='sass.html'>Sass</a>
-                    </li>
-                    <li>
-                        <a href='badges.html'>Components</a>
-                    </li>
-                    <li>
-                        <a href='collapsible.html'>JavaScript</a>
-                    </li>
-                </ul> */}
             </div>
         </nav>
     )

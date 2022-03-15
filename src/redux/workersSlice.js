@@ -1,4 +1,4 @@
-import { createSlice, current } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     workers: [],
@@ -14,12 +14,11 @@ const workersSlice = createSlice({
         },
         asyncSetWorkers(){},
         selectJob(state, action){
-            console.log(current(state));
             state.visibleJobs = state.workers.filter(el => el.job === action.payload)
-          }
+        }
     }
 })
 
 export default workersSlice.reducer
-export const {setWorkers, asyncSetWorkers, selectJob} = workersSlice.actions
+export const {setWorkers, asyncSetWorkers, selectJob, getState} = workersSlice.actions
 
