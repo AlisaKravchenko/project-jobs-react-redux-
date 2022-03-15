@@ -14,9 +14,9 @@ function App() {
       <Header />
       <main >
         <Switch>
-          <Route exact path="/project-jobs-react-redux-saga" render={() => <Home />}/>
-          <Route path="/project-jobs-react-redux-saga/workerinfo/:index" render={() => <WorkerInfo />}/>
-          <Route path="/project-jobs-react-redux-saga/about" render={() => <About />}/>
+          <Route exact path="/" render={() => <Home />}/>
+          <Route path="/workerinfo/:index" render={() => <WorkerInfo />}/>
+          <Route path="/about" render={() => <About />}/>
           <Route path="*" render={() => (<h1>PAGE NOT FOUND</h1>)}/>
         </Switch>
       </main>
